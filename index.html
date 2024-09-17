@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura de Tarot</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlace a Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Enlace a tu CSS personalizado -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <img src="/images/logo.png" alt="Tarot" class="d-inline-block align-top" style="height: 100px;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <!-- Coloca el ícono de casa a la izquierda -->
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html"></i>Inicio</a>
+            </li>
+            <!-- Otros enlaces -->
+            <li class="nav-item">
+                <a class="nav-link" href="/html/grilla.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/html/question.html">Pregunta si o no</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/html/quiensoy.html">Sobre mí</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+        
+<h1 class="text-center my-4 title-highlight">Lectura de Tarot</h1>
+
+        <!-- Contenedor para las cartas -->
+        <div class="card-container d-flex justify-content-center">
+            <div class="card" onclick="revealCard(this)">
+                <img src="/images/card-back.jpg" alt="Carta" />
+            </div>
+            <div class="card" onclick="revealCard(this)">
+                <img src="/images/card-back.jpg" alt="Carta" />
+            </div>
+            <div class="card" onclick="revealCard(this)">
+                <img src="/images/card-back.jpg" alt="Carta" />
+            </div>
+        </div>
+
+        <!-- Contenedor para la narrativa -->
+        <div id="narrative" class="narrative-container" style="display: none;"></div>
+
+        <!-- Contenedor para los botones -->
+        <div id="buttons-container" class="buttons-container text-center my-4">
+            <button class="btn btn-primary btn-icon" onclick="resetCards()">
+                <i class="fas fa-sync-alt"></i> 
+            </button>
+            <button class="btn btn-secondary" onclick="window.location.href='https://wa.me/+5493812105392'">Profundizar</button>
+        </div>
+    </div>
+
+    <div id="promo-container" class="text-center mt-3">
+        <p class="promo-text">¡Oferta única! Toma capturas de las cartas obtenidas y envíamelas a mi WhatsApp para recibir una consulta exclusiva.</p>
+        <a href="https://wa.me/+5493812105392" target="_blank" class="btn btn-success mt-2">Enviar a WhatsApp</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Tarot. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/soniaalexandra.faray" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/+5493812105392" class="whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/sanarte_tuc?igsh=MWFkdm51eTF1dndibQ==" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+
+
+    <!-- Enlace a jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Enlace a Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Enlace a tu archivo JavaScript -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
