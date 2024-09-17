@@ -1,0 +1,335 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #835371; /* Color de fondo general */
+    margin: 0;
+    padding: 0;
+    color: #e6e6e6;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: #2c003e; /* Color de fondo oscuro que combina con el tema */
+    color: #f5e1da; /* Color del texto en crema suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffc107; /* Color dorado para el texto del logo */
+    font-family: 'Caveat', cursive; /* Fuente manuscrita para un toque místico */
+    font-size: 1.8em;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #e0a800; /* Un dorado más oscuro en hover */
+}
+
+.navbar-custom .navbar-nav {
+    margin-left: auto; /* Alinea los elementos a la derecha */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #f5e1da; /* Color del texto de los enlaces */
+    font-family: 'Open Sans', sans-serif; /* Fuente legible y elegante */
+    font-size: 1.1em;
+    transition: color 0.3s ease; /* Transición suave para el color */
+    padding: 0 15px; /* Espacio horizontal para separar los enlaces */
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #e0a800; /* Color dorado en hover */
+}
+
+.navbar-custom .navbar-nav .nav-link i {
+    font-size: 1.3em; /* Tamaño del ícono */
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: #f5e1da; /* Color del borde del botón de navegación */
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="%23f5e1da" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/%3E%3C/svg%3E'); /* Color del icono de hamburguesa */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Desactiva el scroll en el body mientras el splash está activo */
+body.splash-active {
+    overflow: hidden;
+}
+
+/* Ocultar el contenido principal hasta que se inicie */
+#mainContent {
+    display: none;
+}
+
+/* Estilo especial para el mensaje de suspenso */
+.suspense-message {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5em;
+    color: #ffc107;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    margin-top: 30px;
+    opacity: 0; /* Inicialmente invisible */
+    animation: suspenseFadeIn 3s forwards; /* Animación de aparición con mayor duración */
+    animation-delay: 1s; /* Aparece después de 1 segundo */
+}
+
+/* Animación especial para el mensaje de suspenso */
+@keyframes suspenseFadeIn {
+    0% {
+        opacity: 0; /* Comienza invisible */
+        transform: scale(0.8); /* Comienza más pequeño */
+    }
+    50% {
+        opacity: 0.5; /* Aparece parcialmente */
+        transform: scale(1.1); /* Crece un poco */
+    }
+    100% {
+        opacity: 1; /* Termina visible */
+        transform: scale(1); /* Vuelve a tamaño normal */
+    }
+}
+
+/* Contenedor de las cartas */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las cartas */
+    margin: 20px 0; /* Espacio superior e inferior */
+}
+
+.card {
+    width: 150px;
+    height: 250px;
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para las cartas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la carta */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    cursor: pointer;
+    border: 2px solid #6c757d; /* Contorno gris para las cartas */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la carta en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra en hover */
+}
+
+/* Contenedor de la narrativa */
+.narrative-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    color: #f1f1f1; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+    margin: 20px auto; /* Espacio alrededor y centrado */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeInMystic 1s forwards; /* Aplicar la animación de aparición */
+}
+
+/* Animación de aparición */
+@keyframes fadeInMystic {
+    from {
+        opacity: 0; /* Comienza invisible */
+    }
+    to {
+        opacity: 1; /* Termina visible */
+    }
+}
+
+/* Asegúrate de que el contenedor esté oculto inicialmente */
+#narrative {
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilo para el contenedor de botones */
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre los botones */
+    margin: 30px auto; /* Espacio arriba y abajo */
+    max-width: 700px; /* Ancho máximo del contenedor */
+}
+
+/* Estilo para el botón primario */
+.btn-primary {
+    background-color: #e63946; /* Color de fondo rojo oscuro para el botón primario */
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 12px 30px; /* Espaciado interno del botón */
+    font-size: 1.2em; /* Tamaño de fuente del botón */
+    color: #fff; /* Color del texto blanco */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Fuente en negrita para más énfasis */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #d62839; /* Color más oscuro en hover */
+    transform: translateY(-4px); /* Efecto de elevación en hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta la sombra en hover */
+}
+
+/* Estilo para el botón secundario */
+.btn-secondary {
+    background-color: #6a1b9a; /* Color de fondo púrpura oscuro para el botón secundario */
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 12px 30px; /* Espaciado interno del botón */
+    font-size: 1.2em; /* Tamaño de fuente del botón */
+    color: #fff; /* Color del texto blanco */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Fuente en negrita para más énfasis */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #4a0072; /* Color más oscuro en hover */
+    transform: translateY(-4px); /* Efecto de elevación en hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta la sombra en hover */
+}
+
+/* Footer */
+/* Footer */
+.footer {
+    background-color: #2c003e; /* Color oscuro que complementa el tema místico */
+    color: #f5e1da; /* Texto en color crema suave para contraste */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Relativo para ajustar el contenido según sea necesario */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Sombra para un efecto de profundidad */
+    bottom: 0; /* Asegura que esté en la parte inferior */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 22px; /* Espacio debajo del texto de derechos de autor */
+    margin-top: 10px;
+
+}
+
+
+/* Contenedor de íconos de redes sociales */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #f5e1da; /* Color de los íconos por defecto */
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease; /* Transición suave para el color */
+    text-decoration: none;
+    width: 100%;
+}
+
+.social-icons a:hover {
+    /* Efecto hover específico para cada red social */
+    color: #ffffff; /* Color de texto durante el hover */
+}
+
+/* Colores específicos para cada red social */
+.social-icons .facebook:hover {
+    color: #3b5998; /* Color de Facebook en hover */
+}
+
+.social-icons .whatsapp:hover {
+    color: #25D366; /* Color de WhatsApp en hover */
+}
+
+.social-icons .instagram:hover {
+    color: #e1306c; /* Color de Instagram en hover */
+}
+/* Estilo para el formulario de pregunta */
+#question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1; /* Color del texto */
+    border-radius: 15px; /* Bordes redondeados */
+    max-width: 500px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrado automático */
+    text-align: center; /* Centrar texto horizontalmente */
+
+}
+
+/* Estilo de la etiqueta del formulario */
+#question-container label {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-family: 'Caveat', cursive; /* Fuente manuscrita */
+    color: #ffc107; /* Color dorado para la etiqueta */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para la etiqueta */
+}
+
+
+
+#question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1; /* Color del texto */
+    border-radius: 15px; /* Bordes redondeados */
+    max-width: 500px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrado automático */
+    text-align: center; /* Centrar texto horizontalmente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para un efecto de profundidad */
+}
+
+#promo-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    color: #ffc107; /* Color del texto dorado */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para un efecto de profundidad */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px;
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+}
+
+
+.promo-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+#promo-container a {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra para el botón */
+    padding: 10px 25px; /* Espaciado interno del botón */
+}
+

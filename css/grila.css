@@ -1,0 +1,273 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #835371; /* Color de fondo general */
+    color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: #2c003e;
+    color: #f5e1da;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffc107;
+    font-family: 'Caveat', cursive;
+    font-size: 1.8em;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #e0a800;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #f5e1da;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #e0a800;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: #f5e1da;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="%23f5e1da" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/%3E%3C/svg%3E');
+}
+
+/* Footer */
+/* Footer */
+.footer {
+    background-color: #2c003e; /* Color oscuro que complementa el tema místico */
+    color: #f5e1da; /* Texto en color crema suave para contraste */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Relativo para ajustar el contenido según sea necesario */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Sombra para un efecto de profundidad */
+    bottom: 0; /* Asegura que esté en la parte inferior */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 22px; /* Espacio debajo del texto de derechos de autor */
+    margin-top: 10px;
+
+}
+
+
+/* Contenedor de íconos de redes sociales */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #f5e1da; /* Color de los íconos por defecto */
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease; /* Transición suave para el color */
+    text-decoration: none;
+    width: 100%;
+}
+
+.social-icons a:hover {
+    /* Efecto hover específico para cada red social */
+    color: #ffffff; /* Color de texto durante el hover */
+}
+
+/* Colores específicos para cada red social */
+.social-icons .facebook:hover {
+    color: #3b5998; /* Color de Facebook en hover */
+}
+
+.social-icons .whatsapp:hover {
+    color: #25D366; /* Color de WhatsApp en hover */
+}
+
+.social-icons .instagram:hover {
+    color: #e1306c; /* Color de Instagram en hover */
+}
+
+/* La sección de contenido principal */
+.content {
+    flex: 1;
+}
+
+/* Títulos de categorías */
+.category-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Cuadrícula de servicios */
+.row {
+    margin: 0 ; /* Asegura que las columnas se alineen correctamente */
+}
+
+.col-lg-4, .col-md-6, .col-sm-12 {
+    padding: 0 15px; /* Espacio interno para las columnas */
+}
+
+/* Estilo para el título de la página */
+.page-title {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 3rem; /* Tamaño de fuente grande para destacar */
+    font-weight: bold; /* Hace el texto en negrita */
+    color: #ffffff; /* Color blanco del texto */
+    background: linear-gradient(135deg, #2c003e, #d1a8b0); /* Degradado de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px 0; /* Espaciado vertical */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra de caja */
+    max-width: 80%; /* Limita el ancho máximo */
+    margin-left: auto; /* Centra el elemento horizontalmente */
+    margin-right: auto; /* Centra el elemento horizontalmente */
+}
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    .page-title {
+        font-size: 2.5rem; /* Tamaño de fuente ligeramente menor en pantallas medianas */
+        padding: 15px; /* Menos espacio interno */
+    }
+}
+
+@media (max-width: 992px) {
+    .page-title {
+        font-size: 2rem; /* Tamaño de fuente más pequeño en pantallas grandes móviles */
+        padding: 10px; /* Menos espacio interno */
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        padding: 8px; /* Menos espacio interno */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto más sutil */
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 1.25rem; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+        padding: 5px; /* Menos espacio interno */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra del texto aún más sutil */
+    }
+}
+
+
+/* Tarjetas de servicio */
+.service-card {
+    background-color: #000000ab;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.89);
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+    text-align: center;
+    margin-bottom: 30px; /* Espacio debajo de cada tarjeta */
+}
+
+/* Espacio en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 20px; /* Ajusta el margen en pantallas pequeñas si es necesario */
+    }
+}
+
+
+/* Efecto hover para tarjetas */
+.service-card:hover {
+    background-color: rgba(128, 0, 128, 0.4); /* Morado con opacidad */
+    transform: scale(1.05);
+}
+
+/* Ajustar la imagen para que no se desborde */
+.service-card img {
+    width: 100%;
+    height: 200px; /* Altura fija para la imagen */
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin: 10px 15px;
+}
+
+.service-card p {
+    font-size: 1em;
+    margin: 0 15px 15px;
+    flex: 1; /* Permite que la descripción ocupe el espacio restante */
+    display: block; /* Mostrar descripción en pantallas grandes */
+}
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 15px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d11010c5; /* Verde de WhatsApp */
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #5501019c; /* Verde oscuro de WhatsApp */
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .col-lg-4 {
+        width: 50%; /* 2 tarjetas por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        width: 100%; /* Tarjeta ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .service-card {
+        height: auto; /* Ajustar altura automáticamente */
+    }
+
+    .service-card img {
+        height: 150px; /* Ajustar la altura de la imagen en pantallas pequeñas */
+    }
+
+    .service-card p {
+        display: none; /* Ocultar la descripción en pantallas pequeñas */
+    }
+
+    .service-card:hover p {
+        display: block; /* Mostrar la descripción en hover */
+    }
+}
+
